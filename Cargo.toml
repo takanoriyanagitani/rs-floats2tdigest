@@ -1,0 +1,40 @@
+[package]
+name = "rs-floats2tdigest"
+version = "0.1.0"
+edition = "2024"
+
+exclude = [
+]
+
+[profile.release-wasi]
+inherits = "release"
+lto = true
+strip = true
+opt-level = 's'
+codegen-units = 1
+
+[[bin]]
+name = "floats2tdigest"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "forbid"
+expect_used = "forbid"
+panic = "forbid"
+
+[dependencies.tdigest]
+version = "1.0.1"
+default-features = false
+features = [
+  "std",
+  "serde",
+]
+
+[dependencies.serde_json]
+version = "1"
+default-features = false
+features = [
+  "std",
+]

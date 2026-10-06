@@ -3,7 +3,15 @@ name = "rs-floats2tdigest"
 version = "0.1.0"
 edition = "2024"
 
+description = "CLI for computing t-digest from floats."
+license = "Apache-2.0"
+repository = "https://github.com/takanoriyanagitani/rs-floats2tdigest"
+homepage = "https://github.com/takanoriyanagitani/rs-floats2tdigest"
+documentation = "https://docs.rs/rs-floats2tdigest/latest"
+keywords = ["tdigest", "float", "wasi", "convert"]
+
 exclude = [
+  "floats2tdigest.wasm",
 ]
 
 [profile.release-wasi]
